@@ -1,0 +1,50 @@
+{
+  "name": "oauth-gate",
+  "version": "0.1.0",
+  "description": "oauth-gate means qq, wechat, sinaWeiBo, dingding",
+  "main": "app.js",
+  "author": "songXiaoWei",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@git.eju-inc.com:streaming-backend/oauth_and_share_gate.git"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "co": "^4.6.0",
+    "crypto": "0.0.3",
+    "express": "^4.14.0",
+    "express-validator": "^3.1.2",
+    "log4js": "^1.1.0",
+    "moment": "^2.17.1",
+    "mz": "^2.6.0",
+    "node-uuid": "^1.4.7",
+    "redis": "^2.6.3",
+    "request": "^2.79.0",
+    "thunkify": "^2.1.2",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+
+    "start-oauth": "cnpm i --production && pm2 start pm2.config.js",
+    "start-oauth-test": "cnpm i && pm2 start pm2.config.js --env test",
+    "restart-oauth": "cnpm i --production && pm2 restart pm2.config.js",
+    "restart-oauth-test": "cnpm i && pm2 restart pm2.config.js --env test",
+    "stop-oauth": "pm2 stop pm2.config.js",
+    "delete-oauth": "pm2 delete pm2.config.js",
+    "log-oauth": "pm2 logs oauth-gate",
+    "show-oauth": "pm2 show oauth-gate",
+
+    "start-uniqueSourceAdmin": "cnpm i --production && pm2 start pm2_uniqueSourceAdmin.config.js",
+    "start-uniqueSourceAdmin-test": "cnpm i && pm2 start pm2_uniqueSourceAdmin.config.js --env test",
+    "restart-uniqueSourceAdmin": "cnpm i --production && pm2 restart pm2_uniqueSourceAdmin.config.js",
+    "restart-uniqueSourceAdmin-test": "cnpm i && pm2 restart pm2_uniqueSourceAdmin.config.js --env test",
+    "stop-uniqueSourceAdmin": "pm2 stop pm2_uniqueSourceAdmin.config.js",
+    "delete-uniqueSourceAdmin": "pm2 delete pm2_uniqueSourceAdmin.config.js",
+    "log-uniqueSourceAdmin": "pm2 logs uniqueSourceAdmin",
+    "show-uniqueSourceAdmin": "pm2 show uniqueSourceAdmin",
+    
+    "list": "pm2 list"
+  }
+}
